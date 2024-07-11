@@ -7,9 +7,8 @@ test('Verifica API do WordPress', async ({ request }) => {
   // Verifica se a requisição foi bem-sucedida
   expect(response.ok()).toBeTruthy();
   expect(response.status()).toBe(200);
-
-  // Analisa o conteúdo da resposta
-  // const posts = await response.json();
-  //expect(posts).toBeArray(); // Verifica se a resposta é um array
+  expect(response.statusText()).toBe('OK');
+  expect(response.headers()['content-type']).toContain('text/html; charset=UTF-8');
+  expect(response.headers()['server']).toContain('Apache');
   }
 );
