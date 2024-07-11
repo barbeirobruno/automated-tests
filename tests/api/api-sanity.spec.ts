@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import config from '../../config.json'; 
 
-test('Verificar posts recentes da API do WordPress', async ({ request }) => {
-  const response = await request.get(config.baseUrl); // Obtém 3 posts mais recentes
+test('Verifica API do WordPress', async ({ request }) => {
+  const response = await request.get(config.baseUrl); 
 
   // Verifica se a requisição foi bem-sucedida
   expect(response.ok()).toBeTruthy();
