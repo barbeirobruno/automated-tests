@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import config from '../../config.json'; 
 import confidentialFiles from '../../confidentialFiles';
 
-// Os arquivos a serem validados devem ser inseridos presentes no array confidentialFiles.ts
+// Os arquivos a serem validados devem ser inseridos no array confidentialFiles.ts
 for (const file of confidentialFiles) {
   test(`Verificar inacessibilidade de ${file}`, async ({ page }) => {
       try {
